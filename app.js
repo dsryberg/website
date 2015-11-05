@@ -10,6 +10,35 @@ var users = require('./routes/users');
 
 var app = express();
 
+var mysql = require("mysql");
+
+// Setup mysql connections
+
+var sevdenDB = mysql.createConnection({
+    host: "localhost",
+    user: "www",
+    password: "password",   //Change this later!
+    database: "sevden",
+});
+
+sevdenDB.connect( function(err) {
+    if(err){
+        console.log("Error Connecting to sevden DB");
+        return;
+    }
+
+    console.log("Successfully connected to sevdenDB");
+});
+
+/*
+sevdenDB.end( function(err){
+    if(err){
+        console.log("There was an error ending the User DB connection");
+        throw err;
+    }
+});
+*/
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -22,6 +51,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Add persistent variables to 'req'
+
+app.use(function(req, res, next) {
+    req.sevdenDB = sevdenDB;
+
+    next();
+});
+
+// Do routing
 app.use('/', routes);
 app.use('/users', users);
 
