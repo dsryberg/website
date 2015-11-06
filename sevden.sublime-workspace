@@ -16,10 +16,48 @@
 			}
 		},
 		{
-			"file": "routes/index.js",
+			"contents": "<h1>{{title}}</h1>\n<p>Welcome to {{title}}</p>\n\n",
+			"file": "views/index.hbs",
+			"file_size": 48,
+			"file_write_time": 130912419061228026,
 			"settings":
 			{
-				"buffer_size": 378,
+				"buffer_size": 48,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/layout.hbs",
+			"settings":
+			{
+				"buffer_size": 3594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var express = require('express');\nvar router = express.Router();\n\n/* GET home page. */\nrouter.get('/', function(req, res, next) {\n\n    res.render('index', { title: 'Express' });\n\n});\n\nmodule.exports = router;\n",
+			"file": "routes/index.js",
+			"file_size": 378,
+			"file_write_time": 130912315673079001,
+			"settings":
+			{
+				"buffer_size": 209,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bootstrap/less/print.less",
+			"settings":
+			{
+				"buffer_size": 1939,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bootstrap/less/component-animations.less",
+			"settings":
+			{
+				"buffer_size": 666,
 				"line_ending": "Unix"
 			}
 		},
@@ -39,18 +77,31 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 252.0,
+		"last_filter": ":W",
 		"selected_items":
 		[
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":w",
+				":w - Save"
+			]
 		],
-		"width": 392.0
+		"width": 467.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 188.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
 	"distraction_free":
@@ -66,21 +117,26 @@
 	[
 		"/home/sev/Projects/sevden",
 		"/home/sev/Projects/sevden/bin",
-		"/home/sev/Projects/sevden/routes"
+		"/home/sev/Projects/sevden/routes",
+		"/home/sev/Projects/sevden/views"
 	],
 	"file_history":
 	[
+		"/home/sev/Projects/sevden/bootstrap/modals.less",
+		"/home/sev/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/sev/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/sev/Projects/sevden/views/error.hbs",
+		"/home/sev/Projects/sevden/views/index.hbs",
+		"/home/sev/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
 		"/home/sev/Projects/sevden/bin/www",
 		"/home/sev/Projects/sevden/sevden.sublime-project",
 		"/home/sev/Projects/sevden/app.js",
 		"/home/sev/Projects/sevden/routes/index.js",
-		"/home/sev/Documents/test/example.py",
-		"/home/sev/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/sev/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+		"/home/sev/Documents/test/example.py"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -94,12 +150,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"nn",
+			"use",
+			"dto",
 			"word_wrap"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -112,7 +171,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -128,8 +187,8 @@
 						"selection":
 						[
 							[
-								220,
-								220
+								560,
+								560
 							]
 						],
 						"settings":
@@ -137,6 +196,66 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/index.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19,
+								19
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								120
+							],
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/layout.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								468,
+								468
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -148,16 +267,75 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "routes/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 378,
+						"buffer_size": 209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "bootstrap/less/print.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								540,
+								540
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "bootstrap/less/component-animations.less",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 666,
 						"regions":
 						{
 						},
@@ -170,17 +348,19 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 6,
 					"file": "routes/users.js",
 					"semi_transient": false,
 					"settings":
@@ -192,8 +372,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								186,
+								186
 							]
 						],
 						"settings":
@@ -204,7 +384,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -212,7 +392,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 40.0
 	},
 	"input":
 	{
@@ -238,7 +418,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.807834669957,
 			1.0
 		],
 		"rows":
@@ -256,7 +436,7 @@
 	"project": "sevden.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -279,12 +459,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 404.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -294,7 +474,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 186.0,
+	"side_bar_width": 299.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
