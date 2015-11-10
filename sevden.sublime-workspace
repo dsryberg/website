@@ -30,7 +30,7 @@
 			"file": "views/layout.hbs",
 			"settings":
 			{
-				"buffer_size": 3594,
+				"buffer_size": 3400,
 				"line_ending": "Unix"
 			}
 		},
@@ -78,9 +78,13 @@
 	"command_palette":
 	{
 		"height": 252.0,
-		"last_filter": ":W",
+		"last_filter": ":w",
 		"selected_items":
 		[
+			[
+				":w",
+				":w - Save"
+			],
 			[
 				":W",
 				":w - Save"
@@ -88,13 +92,9 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				":w",
-				":w - Save"
 			]
 		],
-		"width": 467.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -242,23 +242,25 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3594,
+						"buffer_size": 3400,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								468,
-								468
+								628,
+								628
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage"
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1373.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
