@@ -1,1 +1,8 @@
+# directories #
+###############
 node_modules/
+
+
+# file extensions #
+###################
+*.sublime-workspace

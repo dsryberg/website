@@ -17,6 +17,8 @@
 
     <link rel='stylesheet' href='/stylesheets/sev_bootstrap.css' />
     <link href="stylesheets/simple-sidebar.css" rel="stylesheet" />
+
+    <script src="javascripts/layout_funcs.js"></script>
   </head>
   <body>
     
@@ -25,6 +27,12 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
+                {{#if knownUser}}
+                <div class="text-center">
+                    <button class="btn btn-danger" id="signin" type="button" style="margin-top:10px">Do I know you?</button>
+                </div>
+                {{/if}}
+
                 <a href="/">
                     <img src="images/mug.jpg" width=90% style="margin:5%">
                 </a>
@@ -35,10 +43,10 @@
                     <a href="about">About Me</a>
                 </li>
                 <li>
-                    <a href="news">Latest News</a>
+                    <a href="news">Blog</a>
                 </li>
                 <li class="active">
-                    <a href="professional">Professional</a>
+                    <a href="professional">Professional Info</a>
                 </li>
                 <li>
                     <a href="friends_and_family">Friends and Family</a>
@@ -51,9 +59,9 @@
                 </li>
 
                 <div class="input-group" style="margin:40px 2% 0 2%">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search for...">
                     <span class="input-group-btn">
-                        <button class="btn btn-success" type="button">#</button>
+                        <button class="btn btn-success" id="search-btn" type="button">#</button>
                     </span>
                 </div> 
                 
