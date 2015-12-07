@@ -6,3 +6,4 @@ node_modules/
 # file extensions #
 ###################
 *.sublime-workspace
+*.sublime-project
